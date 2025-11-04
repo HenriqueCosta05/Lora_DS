@@ -1,3 +1,3 @@
-// Navigation
-export { default as Navbar } from './navbar/Navbar';
-export { default as Carousel } from './carousel/Carousel';
+// Buttons
+export * from './Buttons/Button/Button';
+export * from './Buttons/Button/Button.interface';
