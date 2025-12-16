@@ -35,6 +35,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "4.1.2",
     "@eslint/eslintrc": "^3",
+    "@iconify-icon/react": "^3.0.3",
     "@rollup/plugin-commonjs": "^29",
     "@rollup/plugin-node-resolve": "^16",
     "@rollup/plugin-typescript": "^12",

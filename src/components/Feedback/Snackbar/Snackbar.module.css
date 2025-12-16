@@ -1,0 +1,163 @@
+.snackbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 12px 16px;
+    background-color: var(--surface);
+    color: var(--text);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    z-index: 1400;
+    animation: slideIn var(--transition-base) ease-out;
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+.message {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    padding: 0;
+    opacity: 0.7;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.closeButton:hover {
+    opacity: 1;
+    background: var(--surface-hover);
+}
+
+.topLeft {
+    top: 24px;
+    left: 24px;
+}
+
+.topCenter {
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.topRight {
+    top: 24px;
+    right: 24px;
+}
+
+.bottomLeft {
+    bottom: 24px;
+    left: 24px;
+}
+
+.bottomCenter {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottomRight {
+    bottom: 24px;
+    right: 24px;
+}
+
+.success {
+    background-color: var(--success);
+    color: white;
+}
+
+.info {
+    background-color: var(--info);
+    color: white;
+}
+
+.warning {
+    background-color: var(--warning);
+    color: white;
+}
+
+.error {
+    background-color: var(--error);
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.topCenter {
+    animation: slideInFromTop var(--transition-base) ease-out;
+}
+
+.bottomCenter {
+    animation: slideInFromBottom var(--transition-base) ease-out;
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .snackbar {
+        animation: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .snackbar {
+        min-width: auto;
+        max-width: calc(100vw - 32px);
+        left: 16px !important;
+        right: 16px !important;
+        transform: none !important;
+    }
+}
