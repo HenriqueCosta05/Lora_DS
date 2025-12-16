@@ -1,0 +1,79 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.5;
+  user-select: none;
+  transition: opacity var(--transition-base);
+}
+
+.checkbox[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkbox[data-focus-visible] .box {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(247, 90, 0, 0.15);
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.checkbox:hover:not([data-disabled]) .box {
+  border-color: var(--primary);
+  background-color: var(--surface-hover);
+}
+
+.checkbox[data-selected] .box,
+.checkbox[data-indeterminate] .box {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.checkbox[data-selected]:hover:not([data-disabled]) .box,
+.checkbox[data-indeterminate]:hover:not([data-disabled]) .box {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.box svg {
+  width: 14px;
+  height: 14px;
+  transition: stroke-dashoffset var(--transition-base);
+}
+
+.label {
+  flex: 1;
+}
+
+.checkbox[data-disabled] .label {
+  color: var(--text-disabled);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .checkbox,
+  .box,
+  .box svg {
+    transition: none;
+  }
+  
+  .box svg polyline {
+    stroke-dashoffset: 44 !important;
+  }
+}
