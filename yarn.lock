@@ -3010,6 +3010,11 @@
   resolved "https://registry.yarnpkg.com/@storybook/icons/-/icons-1.6.0.tgz#9fa6eb9c82922b79f75a2cf83c38af30ba7fd696"
   integrity sha512-hcFZIjW8yQz8O8//2WTIXylm5Xsgc+lW9ISLgUk1xGmptIJQRdlhVIXCpSyLrQaaRiyhQRaVg7l3BD9S216BHw==
 
+"@storybook/manager-api@^8.6.14":
+  version "8.6.14"
+  resolved "https://registry.yarnpkg.com/@storybook/manager-api/-/manager-api-8.6.14.tgz#1e0740193fbfd4a66e9ff5f75c7f976e16028752"
+  integrity sha512-ez0Zihuy17udLbfHZQXkGqwtep0mSGgHcNzGN7iZrMP1m+VmNo+7aGCJJdvXi7+iU3yq8weXSQFWg5DqWgLS7g==
+
 "@storybook/nextjs-vite@^10.0.2":
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/@storybook/nextjs-vite/-/nextjs-vite-10.0.2.tgz#0332217ba21fa0ef779ba65dcf096658372ff95d"
@@ -3129,6 +3134,11 @@
     "@storybook/global" "^5.0.0"
     "@storybook/react-dom-shim" "10.1.9"
     react-docgen "^8.0.2"
+
+"@storybook/theming@^8.6.14":
+  version "8.6.14"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-8.6.14.tgz#78c6dc878f705de70c67f2b2d08b8313b985d81a"
+  integrity sha512-r4y+LsiB37V5hzpQo+BM10PaCsp7YlZ0YcZzQP1OCkPlYXmUAFy2VvDKaFRpD8IeNPKug2u4iFm/laDEbs03dg==
 
 "@swc/helpers@0.5.15":
   version "0.5.15"

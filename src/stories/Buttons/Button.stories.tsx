@@ -1,9 +1,20 @@
-import { BaseButtonProps, ButtonComponent } from "../../components";
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { BaseButtonProps, ButtonComponent } from "../../components";
 
 const meta = {
   component: ButtonComponent,
   title: "Buttons/Button",
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  decorators: [
+    (Story) => (
+      <div style={{ padding: '20px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof ButtonComponent>;
 
 export default meta;
@@ -87,4 +98,4 @@ export const LoadingButton: Story = {
     isLoading: true,
   },
   render: (args) => <ButtonComponent {...args} />,
-};  
+};

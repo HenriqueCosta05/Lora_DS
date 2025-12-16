@@ -1,10 +1,21 @@
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import { TextFieldComponent } from "../../components/Forms/TextField/TextField";
 import { BaseTextFieldProps } from "../../components/Forms/TextField/TextField.interface";
-import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   component: TextFieldComponent,
   title: "Forms/TextField",
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  decorators: [
+    (Story) => (
+      <div style={{ padding: '20px', minWidth: '320px' }}>
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     type: {
       control: 'select',
@@ -90,8 +101,17 @@ export const FullWidth: Story = {
 };
 
 export const AllStates: Story = {
+  parameters: {
+    layout: 'padded',
+  },
   render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', maxWidth: '400px' }}>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '24px',
+      maxWidth: '400px',
+      padding: '20px'
+    }}>
       <TextFieldComponent label="Default" placeholder="Enter text" />
       <TextFieldComponent label="Required" placeholder="Enter text" isRequired />
       <TextFieldComponent label="With Description" placeholder="Enter text" description="Helper text goes here" />

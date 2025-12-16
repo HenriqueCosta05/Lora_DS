@@ -1,4 +1,4 @@
-import { TextField, Label, Input, Text, FieldError } from "react-aria-components";
+import { FieldError, Input, Label, Text, TextField } from "react-aria-components";
 import { BaseTextFieldProps } from "./TextField.interface";
 import styles from "./TextField.module.css";
 

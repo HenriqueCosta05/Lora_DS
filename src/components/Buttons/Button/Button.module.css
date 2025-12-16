@@ -1,65 +1,47 @@
-:root {
-  --button-primary-bg: var(--primary);
-  --button-primary-text: var(--text);
-  --button-primary-border: var(--primary);
-  --button-primary-hover-bg: var(--primary-dark);
-  --button-primary-hover-border: var(--primary-dark);
-  
-  --button-secondary-bg: var(--secondary);
-  --button-secondary-text: var(--text);
-  --button-secondary-border: var(--secondary);
-  --button-secondary-hover-bg: var(--secondary);
-  --button-secondary-hover-text: var(--text);
-  
-  --button-radius: 8px;
-  --button-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --button-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
-  --button-focus-ring: 0 0 0 3px rgba(var(--primary-rgb, 59, 130, 246), 0.3);
-}
-
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  
+
   padding: 10px 20px;
-  min-height: 44px; 
-  
+  min-height: 44px;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
   white-space: nowrap;
-  
-  background-color: var(--button-primary-bg);
-  color: var(--button-primary-text);
-  border: 2px solid var(--button-primary-border);
-  border-radius: var(--button-radius);
-  box-shadow: var(--button-shadow);
-  
+
+  background-color: var(--primary);
+  color: var(--text);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+
   cursor: pointer;
   user-select: none;
   text-decoration: none;
-  
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all var(--transition-base);
 }
 
 .button:hover:not(:disabled) {
-  background-color: var(--button-primary-hover-bg);
-  border-color: var(--button-primary-hover-border);
-  box-shadow: var(--button-shadow-hover);
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: var(--shadow-md);
   transform: translateY(-1px);
 }
 
 .button:active:not(:disabled) {
   transform: translateY(0);
-  box-shadow: var(--button-shadow);
+  box-shadow: var(--shadow-sm);
 }
 
 .button:focus-visible {
   outline: none;
-  box-shadow: var(--button-focus-ring), var(--button-shadow);
+  box-shadow: 0 0 0 3px rgba(247, 90, 0, 0.3), var(--shadow-sm);
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
 }
 
 .button:disabled {
@@ -73,29 +55,35 @@
 }
 
 .button.secondary {
-  background-color: var(--button-secondary-bg);
-  color: var(--button-secondary-text);
-  border-color: var(--button-secondary-border);
+  background-color: var(--secondary);
+  color: var(--text);
+  border-color: var(--secondary);
 }
 
 .button.secondary:hover:not(:disabled) {
-  background-color: var(--button-secondary-hover-bg);
-  color: var(--button-secondary-hover-text);
-  border-color: var(--button-secondary-border);
+  background-color: var(--secondary-dark);
+  color: var(--text);
+  border-color: var(--secondary-dark);
+}
+
+.button.secondary:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(133, 148, 72, 0.3);
 }
 
 .button.small {
   padding: 6px 14px;
   min-height: 36px;
   font-size: 14px;
-  border-radius: 6px;
+  border-radius: var(--radius-md);
 }
 
 .button.large {
   padding: 14px 28px;
   min-height: 52px;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: var(--radius-xl);
 }
 
 .button.fullWidth {
@@ -117,15 +105,10 @@
   left: 50%;
   margin-left: -8px;
   margin-top: -8px;
-  border: 2px solid currentColor;
+  border: 2px solid var(--text);
   border-radius: 50%;
   border-top-color: transparent;
   animation: button-spinner 0.6s linear infinite;
-  color: var(--button-primary-text);
-}
-
-.button.loading.secondary::after {
-  color: var(--button-secondary-text);
 }
 
 @keyframes button-spinner {
@@ -144,11 +127,11 @@
   .button {
     min-height: 48px;
   }
-  
+
   .button.small {
     min-height: 40px;
   }
-  
+
   .button.large {
     min-height: 56px;
   }
@@ -164,11 +147,11 @@
   .button {
     transition: none;
   }
-  
+
   .button:hover:not(:disabled) {
     transform: none;
   }
-  
+
   .button.loading::after {
     animation: none;
     border-top-color: currentColor;
