@@ -1,0 +1,78 @@
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all var(--transition-fast);
+    font-weight: 500;
+}
+
+.default {
+    text-decoration: none;
+}
+
+.button {
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+}
+
+.colorPrimary {
+    color: var(--primary);
+}
+
+.colorSecondary {
+    color: var(--secondary);
+}
+
+.colorInherit {
+    color: inherit;
+}
+
+.underlineNone {
+    text-decoration: none;
+}
+
+.underlineHover {
+    text-decoration: none;
+}
+
+.underlineHover[data-hovered] {
+    text-decoration: underline;
+}
+
+.underlineAlways {
+    text-decoration: underline;
+}
+
+.link[data-hovered] {
+    opacity: 0.8;
+}
+
+.button[data-hovered] {
+    background-color: var(--surface-hover);
+    opacity: 1;
+}
+
+.link[data-pressed] {
+    opacity: 0.6;
+}
+
+.link[data-focus-visible] {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.link[data-disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .link {
+        transition: none;
+    }
+}
