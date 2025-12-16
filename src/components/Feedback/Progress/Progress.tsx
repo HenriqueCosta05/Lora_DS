@@ -1,4 +1,4 @@
-import { ProgressBar, Label } from "react-aria-components";
+import { Label, ProgressBar } from "react-aria-components";
 import { BaseProgressProps } from "./Progress.interface";
 import styles from "./Progress.module.css";
 

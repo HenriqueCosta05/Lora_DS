@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { BreadcrumbsComponent, BreadcrumbComponent, BreadcrumbLinkComponent } from "../../components/Navigation/Breadcrumbs/Breadcrumbs";
+import { BreadcrumbComponent, BreadcrumbLinkComponent, BreadcrumbsComponent } from "../../components/Navigation/Breadcrumbs/Breadcrumbs";
 
 const meta = {
   component: BreadcrumbsComponent,

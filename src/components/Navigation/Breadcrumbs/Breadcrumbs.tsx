@@ -1,4 +1,4 @@
-import { Breadcrumbs, Breadcrumb, Link } from "react-aria-components";
+import { Breadcrumb, Breadcrumbs, Link } from "react-aria-components";
 import { BaseBreadcrumbsProps } from "./Breadcrumbs.interface";
 import styles from "./Breadcrumbs.module.css";
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { PaperComponent } from "../../components/Layout/Paper/Paper";
 import { TypographyComponent } from "../../components/DataDisplay/Typography/Typography";
+import { PaperComponent } from "../../components/Layout/Paper/Paper";
 
 const meta = {
   component: PaperComponent,
