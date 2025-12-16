@@ -1,0 +1,164 @@
+.chipGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chipList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    outline: none;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: var(--radius-full);
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    cursor: default;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.chip .label {
+    padding: 0;
+}
+
+.medium {
+    padding: 6px 12px;
+    height: 32px;
+}
+
+.small {
+    padding: 4px 10px;
+    height: 24px;
+    font-size: 12px;
+}
+
+.filled {
+    border: 1px solid transparent;
+}
+
+.outlined {
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.colorDefault.filled {
+    background-color: var(--surface-hover);
+    color: var(--text);
+}
+
+.colorDefault.outlined {
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.colorPrimary.filled {
+    background-color: var(--primary);
+    color: white;
+}
+
+.colorPrimary.outlined {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.colorSecondary.filled {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.colorSecondary.outlined {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.colorSuccess.filled {
+    background-color: var(--success);
+    color: white;
+}
+
+.colorSuccess.outlined {
+    border-color: var(--success);
+    color: var(--success);
+}
+
+.colorError.filled {
+    background-color: var(--error);
+    color: white;
+}
+
+.colorError.outlined {
+    border-color: var(--error);
+    color: var(--error);
+}
+
+.colorWarning.filled {
+    background-color: var(--warning);
+    color: white;
+}
+
+.colorWarning.outlined {
+    border-color: var(--warning);
+    color: var(--warning);
+}
+
+.colorInfo.filled {
+    background-color: var(--info);
+    color: white;
+}
+
+.colorInfo.outlined {
+    border-color: var(--info);
+    color: var(--info);
+}
+
+.chip[data-hovered] {
+    transform: scale(1.05);
+}
+
+.chip[data-focus-visible] {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.chip[data-selected] {
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+.removeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    color: currentColor;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    transition: background-color var(--transition-fast);
+}
+
+.removeButton:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chip {
+        transition: none;
+        transform: none;
+    }
+
+    .chip[data-hovered] {
+        transform: none;
+    }
+}

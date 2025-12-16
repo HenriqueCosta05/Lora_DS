@@ -30,7 +30,7 @@ export const TypographyComponent = (props: BaseTypographyProps) => {
     ...restProps
   } = props;
 
-  const Component = component || variantMapping[variant];
+  const Component = (component || variantMapping[variant]) as ElementType;
 
   const typographyClassNames = [
     styles.typography,
