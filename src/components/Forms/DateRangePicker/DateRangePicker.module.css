@@ -13,12 +13,13 @@
 .group {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
+    gap: 12px;
+    padding: 10px 14px;
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     background-color: var(--surface);
     transition: all var(--transition-fast);
+    min-height: 48px;
 }
 
 .group:focus-within {
@@ -26,21 +27,50 @@
     outline: 2px solid color-mix(in srgb, var(--primary) 20%, transparent);
 }
 
+.inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    background-color: var(--surface-hover);
+    border-radius: var(--radius-sm);
+    flex: 1;
+    min-width: 0;
+}
+
+.inputIcon {
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
 .dateInput {
     display: flex;
     gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    flex-shrink: 0;
 }
 
 .segment {
-    padding: 2px 4px;
+    padding: 4px 6px;
     border-radius: var(--radius-sm);
     font-size: 14px;
+    font-weight: 500;
     color: var(--text);
     text-align: center;
+    min-width: 24px;
 }
 
 .segment[data-placeholder] {
     color: var(--text-secondary);
+    font-weight: 400;
 }
 
 .segment:focus {
@@ -49,27 +79,27 @@
     outline: none;
 }
 
-.separator {
-    color: var(--text-secondary);
-    font-size: 14px;
-}
-
-.button {
+.calendarButton {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4px;
+    padding: 8px;
     border: none;
-    background: transparent;
-    color: var(--text-secondary);
+    background: var(--surface-hover);
+    color: var(--primary);
     cursor: pointer;
     border-radius: var(--radius-sm);
     transition: all var(--transition-fast);
+    flex-shrink: 0;
 }
 
-.button:hover {
-    background-color: var(--surface-hover);
-    color: var(--text);
+.calendarButton:hover {
+    background-color: color-mix(in srgb, var(--primary) 15%, var(--surface-hover));
+    color: var(--primary);
+}
+
+.calendarButton:active {
+    transform: scale(0.95);
 }
 
 .helperText {
@@ -95,15 +125,24 @@
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
     padding: 16px;
-    max-width: min(400px, calc(100vw - 40px));
+    max-width: min(700px, calc(100vw - 40px));
 }
 
 .dialog {
     outline: none;
 }
 
+.calendarsContainer {
+    width: 100%;
+}
+
 .calendar {
     width: 100%;
+}
+
+.calendarGrids {
+    display: flex;
+    gap: 24px;
 }
 
 .header {
@@ -178,11 +217,32 @@
     color: var(--text-secondary);
 }
 
+.calendarCell[data-selection-start],
+.calendarCell[data-selection-end] {
+    background-color: var(--primary);
+    color: white;
+}
+
+.calendarCell[data-hovered] {
+    background-color: color-mix(in srgb, var(--primary) 10%, transparent);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .group,
     .button,
     .navButton,
     .calendarCell {
         transition: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendarGrids {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .popover {
+        max-width: min(400px, calc(100vw - 40px));
     }
 }
