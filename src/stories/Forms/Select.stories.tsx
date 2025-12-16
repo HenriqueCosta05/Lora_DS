@@ -1,5 +1,5 @@
-import { SelectComponent, SelectItemComponent } from "../../components/Forms/Select/Select";
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { SelectComponent, SelectItemComponent } from "../../components/Forms/Select/Select";
 
 const meta = {
   component: SelectComponent,
@@ -35,8 +35,8 @@ export const Default: Story = {
 
 export const WithDescription: Story = {
   render: () => (
-    <SelectComponent 
-      label="Theme" 
+    <SelectComponent
+      label="Theme"
       description="Choose your preferred color scheme"
     >
       <SelectItemComponent id="light">Light</SelectItemComponent>
@@ -60,8 +60,8 @@ export const Required: Story = {
 
 export const WithError: Story = {
   render: () => (
-    <SelectComponent 
-      label="Payment method" 
+    <SelectComponent
+      label="Payment method"
       errorMessage="Please select a payment method"
       isInvalid
     >

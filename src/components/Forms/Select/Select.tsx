@@ -1,15 +1,15 @@
 import {
-    Select,
-    Label,
     Button,
-    SelectValue,
-    Popover,
+    FieldError,
+    Label,
     ListBox,
     ListBoxItem,
-    Text,
-    FieldError
+    Popover,
+    Select,
+    SelectValue,
+    Text
 } from "react-aria-components";
-import { BaseSelectProps, BaseSelectItemProps } from "./Select.interface";
+import { BaseSelectItemProps, BaseSelectProps } from "./Select.interface";
 import styles from "./Select.module.css";
 
 export const SelectComponent = <T extends object>(props: BaseSelectProps<T>) => {

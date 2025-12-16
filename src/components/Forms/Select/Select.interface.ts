@@ -1,4 +1,4 @@
-import { SelectProps, ListBoxItemProps } from "react-aria-components";
+import { ListBoxItemProps, SelectProps } from "react-aria-components";
 
 export interface BaseSelectProps<T extends object> extends Omit<SelectProps<T>, 'className'> {
     label?: string;

@@ -177,7 +177,7 @@
   .popover {
     transition: none;
   }
-  
+
   .popover[data-entering],
   .popover[data-exiting] {
     animation: none;
