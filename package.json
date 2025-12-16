@@ -25,7 +25,7 @@
     "rollup": "rollup -c --bundleConfigAsCjs"
   },
   "dependencies": {
-    "@storybook/nextjs": "^10.0.3",
+    "@storybook/nextjs": "^10",
     "next": "16",
     "react": "^19",
     "react-aria-components": "^1",
