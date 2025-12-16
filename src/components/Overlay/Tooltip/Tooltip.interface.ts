@@ -1,4 +1,4 @@
-import { TooltipTriggerProps, TooltipProps } from "react-aria-components";
+import { TooltipProps, TooltipTriggerProps } from "react-aria-components";
 
 export interface BaseTooltipTriggerProps extends TooltipTriggerProps {
     children: React.ReactNode;

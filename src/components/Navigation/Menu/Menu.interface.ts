@@ -1,4 +1,4 @@
-import { MenuTriggerProps, MenuProps, MenuItemProps } from "react-aria-components";
+import { MenuItemProps, MenuProps, MenuTriggerProps } from "react-aria-components";
 
 export interface BaseMenuTriggerProps extends MenuTriggerProps {
     children: React.ReactNode;

@@ -1,5 +1,5 @@
-import { MenuTrigger, Button, Menu, MenuItem, Popover, Separator } from "react-aria-components";
-import { BaseMenuTriggerProps, BaseMenuProps, BaseMenuItemProps } from "./Menu.interface";
+import { Button, Menu, MenuItem, MenuTrigger, Popover, Separator } from "react-aria-components";
+import { BaseMenuItemProps, BaseMenuProps, BaseMenuTriggerProps } from "./Menu.interface";
 import styles from "./Menu.module.css";
 
 export const MenuTriggerComponent = (props: BaseMenuTriggerProps) => {

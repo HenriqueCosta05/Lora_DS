@@ -9,22 +9,35 @@
   box-shadow: var(--shadow-lg);
   z-index: 1000;
   word-wrap: break-word;
+  position: relative;
 }
 
-.tooltip[data-placement="top"] {
-  margin-bottom: 8px;
+.arrow {
+  display: block;
+  fill: var(--text);
 }
 
-.tooltip[data-placement="bottom"] {
-  margin-top: 8px;
+.arrow svg {
+  display: block;
 }
 
-.tooltip[data-placement="left"] {
-  margin-right: 8px;
+.tooltip[data-placement="top"] .arrow {
+  bottom: -6px;
+  transform: rotate(180deg);
 }
 
-.tooltip[data-placement="right"] {
-  margin-left: 8px;
+.tooltip[data-placement="bottom"] .arrow {
+  top: -6px;
+}
+
+.tooltip[data-placement="left"] .arrow {
+  right: -6px;
+  transform: rotate(90deg);
+}
+
+.tooltip[data-placement="right"] .arrow {
+  left: -6px;
+  transform: rotate(-90deg);
 }
 
 .tooltip[data-entering] {
@@ -61,7 +74,7 @@
   .tooltip {
     animation: none;
   }
-  
+
   .tooltip[data-entering],
   .tooltip[data-exiting] {
     animation: none;

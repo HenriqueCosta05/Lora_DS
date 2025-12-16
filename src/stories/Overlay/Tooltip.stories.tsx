@@ -1,6 +1,6 @@
-import { TooltipTriggerComponent, TooltipComponent, TooltipButtonComponent } from "../../components/Overlay/Tooltip/Tooltip";
-import { ButtonComponent } from "../../components/Buttons/Button/Button";
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { ButtonComponent } from "../../components/Buttons/Button/Button";
+import { TooltipComponent, TooltipTriggerComponent } from "../../components/Overlay/Tooltip/Tooltip";
 
 const meta = {
   component: TooltipTriggerComponent,
@@ -101,12 +101,12 @@ export const MultipleTooltips: Story = {
         <ButtonComponent>Save</ButtonComponent>
         <TooltipComponent>Save your changes</TooltipComponent>
       </TooltipTriggerComponent>
-      
+
       <TooltipTriggerComponent>
         <ButtonComponent variant="secondary">Cancel</ButtonComponent>
         <TooltipComponent>Discard changes</TooltipComponent>
       </TooltipTriggerComponent>
-      
+
       <TooltipTriggerComponent>
         <ButtonComponent>Delete</ButtonComponent>
         <TooltipComponent>Remove this item permanently</TooltipComponent>

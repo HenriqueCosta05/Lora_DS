@@ -1,5 +1,5 @@
-import { MenuTriggerComponent, MenuButtonComponent, MenuComponent, MenuItemComponent, MenuSeparatorComponent } from "../../components/Navigation/Menu/Menu";
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { MenuButtonComponent, MenuComponent, MenuItemComponent, MenuSeparatorComponent, MenuTriggerComponent } from "../../components/Navigation/Menu/Menu";
 
 const meta = {
   component: MenuTriggerComponent,
