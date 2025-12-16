@@ -1,0 +1,75 @@
+.accordion {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.item {
+  border-bottom: 1px solid var(--border);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.header {
+  margin: 0;
+}
+
+.trigger {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--surface);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  text-align: left;
+  transition: background-color var(--transition-fast);
+  outline: none;
+}
+
+.trigger:hover {
+  background-color: var(--surface-hover);
+}
+
+.trigger:focus-visible {
+  background-color: var(--surface-hover);
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+
+.trigger[data-pressed] {
+  background-color: var(--surface-active);
+}
+
+.title {
+  flex: 1;
+  font-weight: 500;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  transition: transform var(--transition-base);
+}
+
+.icon.expanded {
+  transform: rotate(180deg);
+}
+
+.panel {
+  overflow: hidden;
+}
+
+.content {
+  padding: 16px 20px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: var(--background);
+}

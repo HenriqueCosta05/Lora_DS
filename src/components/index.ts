@@ -5,6 +5,8 @@ export * from './Buttons/ButtonGroup/ButtonGroup';
 export * from './Buttons/ButtonGroup/ButtonGroup.interface';
 
 // Forms
+export * from './Forms/Autocomplete/Autocomplete';
+export * from './Forms/Autocomplete/Autocomplete.interface';
 export * from './Forms/Checkbox/Checkbox';
 export * from './Forms/Checkbox/Checkbox.interface';
 export * from './Forms/DatePicker/DatePicker';
@@ -17,6 +19,8 @@ export * from './Forms/InputGroup/InputGroup';
 export * from './Forms/InputGroup/InputGroup.interface';
 export * from './Forms/RadioGroup/RadioGroup';
 export * from './Forms/RadioGroup/RadioGroup.interface';
+export * from './Forms/Rating/Rating';
+export * from './Forms/Rating/Rating.interface';
 export * from './Forms/Select/Select';
 export * from './Forms/Select/Select.interface';
 export * from './Forms/Slider/Slider';
@@ -47,12 +51,18 @@ export * from './Navigation/Menu/Menu';
 export * from './Navigation/Menu/Menu.interface';
 export * from './Navigation/Pagination/Pagination';
 export * from './Navigation/Pagination/Pagination.interface';
+export * from './Navigation/SpeedDial/SpeedDial';
+export * from './Navigation/SpeedDial/SpeedDial.interface';
 export * from './Navigation/Stepper/Stepper';
 export * from './Navigation/Stepper/Stepper.interface';
 export * from './Navigation/Tabs/Tabs';
 export * from './Navigation/Tabs/Tabs.interface';
+export * from './Navigation/TreeView/TreeView';
+export * from './Navigation/TreeView/TreeView.interface';
 
 // Data Display
+export * from './DataDisplay/Accordion/Accordion';
+export * from './DataDisplay/Accordion/Accordion.interface';
 export * from './DataDisplay/Avatar/Avatar';
 export * from './DataDisplay/Avatar/Avatar.interface';
 export * from './DataDisplay/Badge/Badge';
