@@ -1,0 +1,161 @@
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: var(--radius-lg);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    font-size: 16px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+.title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.message {
+    color: inherit;
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    padding: 0;
+    opacity: 0.7;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.closeButton:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.standard.success {
+    background-color: color-mix(in srgb, var(--success) 10%, transparent);
+    color: color-mix(in srgb, var(--success) 90%, black);
+    border: 1px solid color-mix(in srgb, var(--success) 30%, transparent);
+}
+
+.standard.success .icon {
+    background-color: var(--success);
+    color: white;
+}
+
+.standard.info {
+    background-color: color-mix(in srgb, var(--info) 10%, transparent);
+    color: color-mix(in srgb, var(--info) 90%, black);
+    border: 1px solid color-mix(in srgb, var(--info) 30%, transparent);
+}
+
+.standard.info .icon {
+    background-color: var(--info);
+    color: white;
+}
+
+.standard.warning {
+    background-color: color-mix(in srgb, var(--warning) 10%, transparent);
+    color: color-mix(in srgb, var(--warning) 90%, black);
+    border: 1px solid color-mix(in srgb, var(--warning) 30%, transparent);
+}
+
+.standard.warning .icon {
+    background-color: var(--warning);
+    color: white;
+}
+
+.standard.error {
+    background-color: color-mix(in srgb, var(--error) 10%, transparent);
+    color: color-mix(in srgb, var(--error) 90%, black);
+    border: 1px solid color-mix(in srgb, var(--error) 30%, transparent);
+}
+
+.standard.error .icon {
+    background-color: var(--error);
+    color: white;
+}
+
+.filled.success {
+    background-color: var(--success);
+    color: white;
+}
+
+.filled.info {
+    background-color: var(--info);
+    color: white;
+}
+
+.filled.warning {
+    background-color: var(--warning);
+    color: white;
+}
+
+.filled.error {
+    background-color: var(--error);
+    color: white;
+}
+
+.filled .icon {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.outlined.success {
+    background-color: transparent;
+    color: var(--success);
+    border: 1.5px solid var(--success);
+}
+
+.outlined.info {
+    background-color: transparent;
+    color: var(--info);
+    border: 1.5px solid var(--info);
+}
+
+.outlined.warning {
+    background-color: transparent;
+    color: var(--warning);
+    border: 1.5px solid var(--warning);
+}
+
+.outlined.error {
+    background-color: transparent;
+    color: var(--error);
+    border: 1.5px solid var(--error);
+}
+
+.outlined .icon {
+    background-color: transparent;
+    border: 1.5px solid currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .closeButton {
+        transition: none;
+    }
+}

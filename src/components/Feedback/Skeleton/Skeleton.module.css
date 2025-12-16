@@ -1,0 +1,73 @@
+.skeleton {
+    background-color: var(--surface-hover);
+    display: block;
+}
+
+.text {
+    height: 1em;
+    border-radius: var(--radius-sm);
+    transform-origin: 0 55%;
+    transform: scale(1, 0.6);
+}
+
+.circular {
+    border-radius: var(--radius-full);
+}
+
+.rectangular {
+    border-radius: 0;
+}
+
+.rounded {
+    border-radius: var(--radius-lg);
+}
+
+.animationPulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.animationWave {
+    position: relative;
+    overflow: hidden;
+}
+
+.animationWave::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animationPulse,
+    .animationWave::after {
+        animation: none;
+    }
+}
