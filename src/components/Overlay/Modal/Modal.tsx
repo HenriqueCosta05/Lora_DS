@@ -1,5 +1,5 @@
-import { ModalOverlay, Modal, Dialog, Heading } from "react-aria-components";
-import { BaseModalProps, BaseDialogProps } from "./Modal.interface";
+import { Dialog, Heading, Modal, ModalOverlay } from "react-aria-components";
+import { BaseDialogProps, BaseModalProps } from "./Modal.interface";
 import styles from "./Modal.module.css";
 
 export const ModalComponent = (props: BaseModalProps) => {

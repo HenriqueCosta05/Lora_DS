@@ -1,7 +1,7 @@
-import { ModalComponent, DialogComponent } from "../../components/Overlay/Modal/Modal";
-import { ButtonComponent } from "../../components/Buttons/Button/Button";
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import { useState } from "react";
+import { ButtonComponent } from "../../components/Buttons/Button/Button";
+import { DialogComponent, ModalComponent } from "../../components/Overlay/Modal/Modal";
 
 const meta = {
   component: ModalComponent,
@@ -19,7 +19,7 @@ export const Default: Story = {
   args: { children: null },
   render: () => {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
       <>
         <ButtonComponent onPress={() => setIsOpen(true)}>
@@ -39,7 +39,7 @@ export const WithLongContent: Story = {
   args: { children: null },
   render: () => {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
       <>
         <ButtonComponent onPress={() => setIsOpen(true)}>
@@ -64,7 +64,7 @@ export const WithActions: Story = {
   args: { children: null },
   render: () => {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
       <>
         <ButtonComponent onPress={() => setIsOpen(true)}>
@@ -92,7 +92,7 @@ export const WithoutTitle: Story = {
   args: { children: null },
   render: () => {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
       <>
         <ButtonComponent onPress={() => setIsOpen(true)}>
@@ -113,7 +113,7 @@ export const NonDismissible: Story = {
   args: { children: null },
   render: () => {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     return (
       <>
         <ButtonComponent onPress={() => setIsOpen(true)}>

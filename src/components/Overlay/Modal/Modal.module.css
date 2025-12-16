@@ -147,21 +147,21 @@
   .overlay {
     padding: 0;
   }
-  
+
   .modal {
     max-width: 100%;
     max-height: 100vh;
     border-radius: 0;
   }
-  
+
   .modal[data-entering] {
     animation: slideUpMobile var(--transition-base);
   }
-  
+
   .modal[data-exiting] {
     animation: slideDownMobile var(--transition-fast);
   }
-  
+
   @keyframes slideUpMobile {
     from {
       transform: translateY(100%);
@@ -170,7 +170,7 @@
       transform: translateY(0);
     }
   }
-  
+
   @keyframes slideDownMobile {
     from {
       transform: translateY(0);
@@ -186,7 +186,7 @@
   .modal {
     animation: none;
   }
-  
+
   .closeButton {
     transition: none;
   }
