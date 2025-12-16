@@ -1,0 +1,132 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text);
+}
+
+.groupLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.group[data-required] .groupLabel::after {
+  content: " *";
+  color: var(--error);
+}
+
+.description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.error {
+  font-size: 13px;
+  color: var(--error);
+  font-weight: 500;
+  margin: 0;
+}
+
+.radios {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.group.horizontal .radios {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.5;
+  user-select: none;
+  transition: opacity var(--transition-base);
+}
+
+.radio[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.radio[data-focus-visible] .circle {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(247, 90, 0, 0.15);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-full);
+  background-color: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.radio:hover:not([data-disabled]) .circle {
+  border-color: var(--primary);
+  background-color: var(--surface-hover);
+}
+
+.radio[data-selected] .circle {
+  border-color: var(--primary);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary);
+  transform: scale(0);
+  transition: transform var(--transition-base);
+}
+
+.radio[data-selected] .dot {
+  transform: scale(1);
+}
+
+.radio[data-disabled][data-selected] .dot {
+  background-color: var(--text-disabled);
+}
+
+.label {
+  flex: 1;
+}
+
+.radio[data-disabled] .label {
+  color: var(--text-disabled);
+}
+
+.group[data-invalid] .circle {
+  border-color: var(--error);
+}
+
+.group[data-invalid] .radio[data-selected] .circle {
+  border-color: var(--error);
+}
+
+.group[data-invalid] .radio[data-selected] .dot {
+  background-color: var(--error);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .radio,
+  .circle,
+  .dot {
+    transition: none;
+  }
+}
