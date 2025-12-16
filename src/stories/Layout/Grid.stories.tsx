@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
+import { TypographyComponent } from "../../components/DataDisplay/Typography/Typography";
 import { GridComponent } from "../../components/Layout/Grid/Grid";
 import { PaperComponent } from "../../components/Layout/Paper/Paper";
-import { TypographyComponent } from "../../components/DataDisplay/Typography/Typography";
 
 const meta = {
   component: GridComponent,
