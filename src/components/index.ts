@@ -29,14 +29,13 @@ export * from './Navigation/Tabs/Tabs';
 export * from './Navigation/Tabs/Tabs.interface';
 
 // Data Display
+export * from './DataDisplay/Chip/Chip';
+export * from './DataDisplay/Chip/Chip.interface';
+export * from './DataDisplay/Divider/Divider';
+export * from './DataDisplay/Divider/Divider.interface';
 export * from './DataDisplay/ListBox/ListBox';
 export * from './DataDisplay/ListBox/ListBox.interface';
 export * from './DataDisplay/Table/Table';
 export * from './DataDisplay/Table/Table.interface';
 export * from './DataDisplay/Typography/Typography';
 export * from './DataDisplay/Typography/Typography.interface';
-export * from './DataDisplay/Divider/Divider';
-export * from './DataDisplay/Divider/Divider.interface';
-export * from './DataDisplay/Chip/Chip';
-export * from './DataDisplay/Chip/Chip.interface';
-

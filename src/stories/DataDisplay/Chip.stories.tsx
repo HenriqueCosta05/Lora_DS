@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { ChipGroupComponent, ChipComponent } from "../../components/DataDisplay/Chip/Chip";
+import { ChipComponent, ChipGroupComponent } from "../../components/DataDisplay/Chip/Chip";
 
 const meta = {
   component: ChipComponent,

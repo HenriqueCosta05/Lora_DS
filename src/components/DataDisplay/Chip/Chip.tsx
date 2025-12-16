@@ -1,4 +1,4 @@
-import { TagGroup, Tag, TagList, Label, Button } from "react-aria-components";
+import { Button, Label, Tag, TagGroup, TagList } from "react-aria-components";
 import { BaseChipGroupProps, BaseChipProps } from "./Chip.interface";
 import styles from "./Chip.module.css";
 
@@ -19,14 +19,14 @@ export const ChipGroupComponent = <T extends object>(props: BaseChipGroupProps<T
 };
 
 export const ChipComponent = (props: BaseChipProps) => {
-    const { 
-        children, 
-        variant = 'filled', 
-        color = 'default', 
+    const {
+        children,
+        variant = 'filled',
+        color = 'default',
         size = 'medium',
         onDelete,
-        className, 
-        ...restProps 
+        className,
+        ...restProps
     } = props;
 
     const chipClassNames = [
