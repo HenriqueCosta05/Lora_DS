@@ -1,6 +1,6 @@
+import type { Meta, StoryObj } from "@storybook/nextjs";
 import { CheckboxComponent } from "../../components/Forms/Checkbox/Checkbox";
 import { BaseCheckboxProps } from "../../components/Forms/Checkbox/Checkbox.interface";
-import type { Meta, StoryObj } from "@storybook/nextjs";
 
 const meta = {
   component: CheckboxComponent,
@@ -72,9 +72,9 @@ export const AllStates: Story = {
     layout: 'padded',
   },
   render: () => (
-    <div style={{ 
-      display: 'flex', 
-      flexDirection: 'column', 
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
       gap: '16px',
       padding: '20px'
     }}>

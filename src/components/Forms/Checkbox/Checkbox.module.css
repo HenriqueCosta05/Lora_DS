@@ -72,7 +72,7 @@
   .box svg {
     transition: none;
   }
-  
+
   .box svg polyline {
     stroke-dashoffset: 44 !important;
   }
