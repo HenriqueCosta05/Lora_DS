@@ -9,6 +9,8 @@ export * from './Forms/RadioGroup/RadioGroup';
 export * from './Forms/RadioGroup/RadioGroup.interface';
 export * from './Forms/Select/Select';
 export * from './Forms/Select/Select.interface';
+export * from './Forms/Slider/Slider';
+export * from './Forms/Slider/Slider.interface';
 export * from './Forms/Switch/Switch';
 export * from './Forms/Switch/Switch.interface';
 export * from './Forms/TextField/TextField';
@@ -29,6 +31,10 @@ export * from './Navigation/Tabs/Tabs';
 export * from './Navigation/Tabs/Tabs.interface';
 
 // Data Display
+export * from './DataDisplay/Avatar/Avatar';
+export * from './DataDisplay/Avatar/Avatar.interface';
+export * from './DataDisplay/Badge/Badge';
+export * from './DataDisplay/Badge/Badge.interface';
 export * from './DataDisplay/Chip/Chip';
 export * from './DataDisplay/Chip/Chip.interface';
 export * from './DataDisplay/Divider/Divider';

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { BadgeComponent } from "../../components/DataDisplay/Badge/Badge";
 import { AvatarComponent } from "../../components/DataDisplay/Avatar/Avatar";
+import { BadgeComponent } from "../../components/DataDisplay/Badge/Badge";
 
 const meta = {
   component: BadgeComponent,

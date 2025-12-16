@@ -17,12 +17,12 @@ export const BadgeComponent = (props: BaseBadgeProps) => {
 
     const getBadgeContent = () => {
         if (variant === 'dot') return null;
-        
+
         if (typeof badgeContent === 'number') {
             if (badgeContent === 0 && !showZero) return null;
             return badgeContent > max ? `${max}+` : badgeContent;
         }
-        
+
         return badgeContent;
     };
 
