@@ -1,5 +1,5 @@
 import { ListBox, ListBoxItem, Text } from "react-aria-components";
-import { BaseListBoxProps, BaseListBoxItemProps } from "./ListBox.interface";
+import { BaseListBoxItemProps, BaseListBoxProps } from "./ListBox.interface";
 import styles from "./ListBox.module.css";
 
 export const ListBoxComponent = <T extends object>(props: BaseListBoxProps<T>) => {

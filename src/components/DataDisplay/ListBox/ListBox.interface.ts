@@ -1,4 +1,4 @@
-import { ListBoxProps, ListBoxItemProps } from "react-aria-components";
+import { ListBoxItemProps, ListBoxProps } from "react-aria-components";
 
 export interface BaseListBoxProps<T> extends Omit<ListBoxProps<T>, 'className'> {
     children: React.ReactNode;

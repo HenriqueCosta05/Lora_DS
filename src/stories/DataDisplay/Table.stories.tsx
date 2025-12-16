@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { TableComponent, TableHeaderComponent, ColumnComponent, TableBodyComponent, RowComponent, CellComponent } from "../../components/DataDisplay/Table/Table";
+import { CellComponent, ColumnComponent, RowComponent, TableBodyComponent, TableComponent, TableHeaderComponent } from "../../components/DataDisplay/Table/Table";
 
 const meta = {
   component: TableComponent,

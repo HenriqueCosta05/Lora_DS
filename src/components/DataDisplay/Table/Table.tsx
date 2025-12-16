@@ -1,5 +1,5 @@
-import { Table, TableHeader, Column, TableBody, Row, Cell, Button } from "react-aria-components";
-import { BaseTableProps, BaseTableHeaderProps, BaseColumnProps, BaseTableBodyProps, BaseRowProps, BaseCellProps } from "./Table.interface";
+import { Cell, Column, Row, Table, TableBody, TableHeader } from "react-aria-components";
+import { BaseCellProps, BaseColumnProps, BaseRowProps, BaseTableBodyProps, BaseTableHeaderProps, BaseTableProps } from "./Table.interface";
 import styles from "./Table.module.css";
 
 export const TableComponent = (props: BaseTableProps) => {

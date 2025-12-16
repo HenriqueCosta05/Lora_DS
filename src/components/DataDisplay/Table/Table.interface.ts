@@ -1,4 +1,4 @@
-import { TableProps, TableHeaderProps, ColumnProps, TableBodyProps, RowProps, CellProps } from "react-aria-components";
+import { CellProps, ColumnProps, RowProps, TableBodyProps, TableHeaderProps, TableProps } from "react-aria-components";
 
 export interface BaseTableProps extends Omit<TableProps, 'className'> {
     children: React.ReactNode;
