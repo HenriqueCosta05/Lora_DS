@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
-import { ContainerComponent } from "../../components/Layout/Container/Container";
 import { TypographyComponent } from "../../components/DataDisplay/Typography/Typography";
+import { ContainerComponent } from "../../components/Layout/Container/Container";
 
 const meta = {
   component: ContainerComponent,
