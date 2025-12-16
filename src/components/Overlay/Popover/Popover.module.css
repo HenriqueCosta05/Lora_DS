@@ -1,0 +1,133 @@
+.popover {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  outline: none;
+  max-width: 300px;
+  max-height: min(400px, calc(100vh - 40px));
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  display: block;
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 1px;
+}
+
+.arrow svg {
+  display: block;
+}
+
+.popover[data-placement="top"] .arrow {
+  bottom: -7px;
+  transform: rotate(180deg);
+}
+
+.popover[data-placement="bottom"] .arrow {
+  top: -7px;
+}
+
+.popover[data-placement="left"] .arrow {
+  right: -7px;
+  transform: rotate(90deg);
+}
+
+.popover[data-placement="right"] .arrow {
+  left: -7px;
+  transform: rotate(-90deg);
+}
+
+.popover[data-entering] {
+  animation: popoverIn var(--transition-base) ease-out;
+}
+
+.popover[data-exiting] {
+  animation: popoverOut 150ms ease-in;
+}
+
+.dialog {
+  padding: 20px;
+  outline: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+.dialog::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dialog::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dialog::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+.dialog::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.dialog h2 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.dialog p {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.dialog p:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes popoverIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes popoverOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .popover {
+    max-width: calc(100vw - 32px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popover {
+    animation: none;
+  }
+
+  .popover[data-entering],
+  .popover[data-exiting] {
+    animation: none;
+  }
+}
