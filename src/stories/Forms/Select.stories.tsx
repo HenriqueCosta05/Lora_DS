@@ -21,6 +21,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  args: { children: null },
   render: () => (
     <SelectComponent label="Country">
       <SelectItemComponent id="us">United States</SelectItemComponent>
@@ -34,6 +35,7 @@ export const Default: Story = {
 };
 
 export const WithDescription: Story = {
+  args: { children: null },
   render: () => (
     <SelectComponent
       label="Theme"
@@ -47,6 +49,7 @@ export const WithDescription: Story = {
 };
 
 export const Required: Story = {
+  args: { children: null },
   render: () => (
     <SelectComponent label="Size" isRequired>
       <SelectItemComponent id="xs">Extra Small</SelectItemComponent>
@@ -59,6 +62,7 @@ export const Required: Story = {
 };
 
 export const WithError: Story = {
+  args: { children: null },
   render: () => (
     <SelectComponent
       label="Payment method"
@@ -73,6 +77,7 @@ export const WithError: Story = {
 };
 
 export const Disabled: Story = {
+  args: { children: null },
   render: () => (
     <SelectComponent label="Plan" isDisabled>
       <SelectItemComponent id="free">Free</SelectItemComponent>
@@ -83,6 +88,7 @@ export const Disabled: Story = {
 };
 
 export const DisabledOption: Story = {
+  args: { children: null },
   render: () => (
     <SelectComponent label="Delivery time">
       <SelectItemComponent id="morning">Morning (8-12)</SelectItemComponent>
@@ -93,6 +99,7 @@ export const DisabledOption: Story = {
 };
 
 export const DefaultSelected: Story = {
+  args: { children: null },
   render: () => (
     <SelectComponent label="Language" defaultSelectedKey="en">
       <SelectItemComponent id="en">English</SelectItemComponent>
@@ -104,6 +111,7 @@ export const DefaultSelected: Story = {
 };
 
 export const ManyOptions: Story = {
+  args: { children: null },
   render: () => (
     <SelectComponent label="State">
       <SelectItemComponent id="al">Alabama</SelectItemComponent>

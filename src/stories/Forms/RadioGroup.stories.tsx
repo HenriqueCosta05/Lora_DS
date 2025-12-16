@@ -21,6 +21,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  args: { children: null },
   render: () => (
     <RadioGroupComponent label="Favorite color">
       <RadioComponent value="red">Red</RadioComponent>
@@ -31,6 +32,7 @@ export const Default: Story = {
 };
 
 export const WithDescription: Story = {
+  args: { children: null },
   render: () => (
     <RadioGroupComponent
       label="Notification preference"
@@ -44,6 +46,7 @@ export const WithDescription: Story = {
 };
 
 export const Required: Story = {
+  args: { children: null },
   render: () => (
     <RadioGroupComponent label="Payment method" isRequired>
       <RadioComponent value="credit">Credit Card</RadioComponent>
@@ -54,6 +57,7 @@ export const Required: Story = {
 };
 
 export const WithError: Story = {
+  args: { children: null },
   render: () => (
     <RadioGroupComponent
       label="Shipping method"
@@ -68,6 +72,7 @@ export const WithError: Story = {
 };
 
 export const Horizontal: Story = {
+  args: { children: null },
   render: () => (
     <RadioGroupComponent label="Size" orientation="horizontal">
       <RadioComponent value="xs">XS</RadioComponent>
@@ -80,6 +85,7 @@ export const Horizontal: Story = {
 };
 
 export const Disabled: Story = {
+  args: { children: null },
   render: () => (
     <RadioGroupComponent label="Subscription plan" isDisabled>
       <RadioComponent value="free">Free</RadioComponent>
@@ -90,6 +96,7 @@ export const Disabled: Story = {
 };
 
 export const DisabledOption: Story = {
+  args: { children: null },
   render: () => (
     <RadioGroupComponent label="Delivery time">
       <RadioComponent value="morning">Morning (8-12)</RadioComponent>
@@ -100,6 +107,7 @@ export const DisabledOption: Story = {
 };
 
 export const DefaultSelected: Story = {
+  args: { children: null },
   render: () => (
     <RadioGroupComponent label="Theme" defaultValue="dark">
       <RadioComponent value="light">Light</RadioComponent>
@@ -110,6 +118,7 @@ export const DefaultSelected: Story = {
 };
 
 export const AllStates: Story = {
+  args: { children: null },
   parameters: {
     layout: 'padded',
   },
