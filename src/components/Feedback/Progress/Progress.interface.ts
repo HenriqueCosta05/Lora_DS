@@ -5,5 +5,6 @@ export interface BaseProgressProps extends Omit<ProgressBarProps, 'className'> {
     color?: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'info';
     size?: 'small' | 'medium' | 'large';
     showValue?: boolean;
+    label?: string;
     className?: string;
 }
