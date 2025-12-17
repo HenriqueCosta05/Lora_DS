@@ -1,7 +1,7 @@
 {
   "name": "lora-ds",
   "description": "A comprehensive design system and component library for building accessible web applications with React and Next.js. Built with React Aria Components.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Henrique",
   "type": "module",
@@ -37,12 +37,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/lora-design-system.git"
+    "url": "https://github.com/HenriqueCosta05/Lora_DS.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/lora-design-system/issues"
+    "url": "https://github.com/HenriqueCosta05/Lora_DS/issues"
   },
-  "homepage": "https://github.com/yourusername/lora-design-system#readme",
+  "homepage": "https://github.com/HenriqueCosta05/Lora_DS#readme",
   "peerDependencies": {
     "@iconify-icon/react": "^3.0.0",
     "react": "^18.0.0 || ^19.0.0",
