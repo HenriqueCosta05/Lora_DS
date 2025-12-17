@@ -1,0 +1,161 @@
+.typography {
+  margin: 0;
+  color: var(--text);
+}
+
+.h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.h4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.h5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.h6 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.body1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.body2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.subtitle1 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.subtitle2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+.overline {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.alignJustify {
+  text-align: justify;
+}
+
+.colorPrimary {
+  color: var(--primary);
+}
+
+.colorSecondary {
+  color: var(--secondary);
+}
+
+.colorText {
+  color: var(--text);
+}
+
+.colorError {
+  color: var(--error);
+}
+
+.colorSuccess {
+  color: var(--success);
+}
+
+.colorWarning {
+  color: var(--warning);
+}
+
+.colorInfo {
+  color: var(--info);
+}
+
+.noWrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gutterBottom {
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 40px;
+  }
+
+  .h2 {
+    font-size: 32px;
+  }
+
+  .h3 {
+    font-size: 28px;
+  }
+
+  .h4 {
+    font-size: 22px;
+  }
+
+  .h5 {
+    font-size: 18px;
+  }
+
+  .h6 {
+    font-size: 16px;
+  }
+}

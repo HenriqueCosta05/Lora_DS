@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-export interface BasePaginationProps extends HTMLAttributes<HTMLDivElement> {
+export interface BasePaginationProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
     count: number;
     page: number;
     onChange: (page: number) => void;

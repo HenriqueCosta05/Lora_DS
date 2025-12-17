@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.disableGutters {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.xs {
+    max-width: 444px;
+}
+
+.sm {
+    max-width: 600px;
+}
+
+.md {
+    max-width: 900px;
+}
+
+.lg {
+    max-width: 1200px;
+}
+
+.xl {
+    max-width: 1536px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}

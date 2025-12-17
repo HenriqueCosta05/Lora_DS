@@ -1,0 +1,82 @@
+.tooltip {
+  background-color: var(--text);
+  color: var(--background);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 250px;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.arrow {
+  display: block;
+  fill: var(--text);
+}
+
+.arrow svg {
+  display: block;
+}
+
+.tooltip[data-placement="top"] .arrow {
+  bottom: -6px;
+  transform: rotate(180deg);
+}
+
+.tooltip[data-placement="bottom"] .arrow {
+  top: -6px;
+}
+
+.tooltip[data-placement="left"] .arrow {
+  right: -6px;
+  transform: rotate(90deg);
+}
+
+.tooltip[data-placement="right"] .arrow {
+  left: -6px;
+  transform: rotate(-90deg);
+}
+
+.tooltip[data-entering] {
+  animation: tooltipIn var(--transition-fast);
+}
+
+.tooltip[data-exiting] {
+  animation: tooltipOut 100ms ease-in;
+}
+
+@keyframes tooltipIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes tooltipOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tooltip {
+    animation: none;
+  }
+
+  .tooltip[data-entering],
+  .tooltip[data-exiting] {
+    animation: none;
+  }
+}

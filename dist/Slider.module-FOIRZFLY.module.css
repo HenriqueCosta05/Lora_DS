@@ -1,0 +1,92 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    min-width: 200px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.output {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-left: auto;
+}
+
+.track {
+    position: relative;
+    height: 6px;
+    width: 100%;
+    border-radius: var(--radius-full);
+    background-color: var(--surface-hover);
+    cursor: pointer;
+}
+
+.track[data-disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.fill {
+    position: absolute;
+    height: 100%;
+    border-radius: var(--radius-full);
+    background-color: var(--primary);
+    pointer-events: none;
+}
+
+.slider[data-orientation="horizontal"] .fill {
+    width: var(--slider-percentage, 0%);
+}
+
+.thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    background-color: var(--primary);
+    border: 2px solid white;
+    box-shadow: var(--shadow-md);
+    cursor: grab;
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.thumb:active {
+    cursor: grabbing;
+}
+
+.thumb[data-hovered] {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.thumb[data-dragging] {
+    transform: scale(1.2);
+    box-shadow: var(--shadow-xl), 0 0 0 8px color-mix(in srgb, var(--primary) 15%, transparent);
+}
+
+.thumb[data-focus-visible] {
+    box-shadow: var(--shadow-lg), 0 0 0 4px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.thumb[data-disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .thumb {
+        transition: none;
+    }
+
+    .thumb[data-hovered],
+    .thumb[data-dragging] {
+        transform: none;
+    }
+}

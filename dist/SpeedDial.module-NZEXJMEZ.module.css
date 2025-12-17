@@ -1,0 +1,169 @@
+.speedDial {
+  position: relative;
+  display: inline-flex;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+.fab {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  z-index: 1001;
+  outline: none;
+}
+
+.fab:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-xl);
+}
+
+.fab:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  outline-offset: 2px;
+}
+
+.fab:active {
+  transform: scale(0.95);
+}
+
+.fabIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base);
+}
+
+.fabIcon.rotated {
+  transform: rotate(45deg);
+}
+
+.actions {
+  position: absolute;
+  display: flex;
+  z-index: 1001;
+}
+
+.speedDial.up .actions {
+  bottom: 72px;
+  flex-direction: column-reverse;
+  gap: 12px;
+}
+
+.speedDial.down .actions {
+  top: 72px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.speedDial.left .actions {
+  right: 72px;
+  flex-direction: row-reverse;
+  gap: 12px;
+  align-items: center;
+}
+
+.speedDial.right .actions {
+  left: 72px;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+.actionWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: speedDialActionIn var(--transition-base) ease-out;
+}
+
+.speedDial.left .actionWrapper,
+.speedDial.right .actionWrapper {
+  flex-direction: row;
+}
+
+.speedDial.left .actionWrapper {
+  flex-direction: row-reverse;
+}
+
+.actionLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  background-color: var(--surface);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+  opacity: 0;
+  animation: speedDialLabelIn var(--transition-base) ease-out forwards;
+  animation-delay: 50ms;
+}
+
+.actionButton {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  outline: none;
+}
+
+.actionButton:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--surface-hover);
+}
+
+.actionButton:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.actionButton:active {
+  transform: scale(0.95);
+}
+
+@keyframes speedDialActionIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes speedDialLabelIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

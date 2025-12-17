@@ -1,0 +1,90 @@
+.listBox {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 4px;
+  outline: none;
+  max-height: 400px;
+  overflow-y: auto;
+  min-width: 200px;
+}
+
+.listBox::-webkit-scrollbar {
+  width: 8px;
+}
+
+.listBox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.listBox::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+.listBox::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.item {
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast);
+  position: relative;
+}
+
+.item[data-hovered] {
+  background-color: var(--surface-hover);
+}
+
+.item[data-focused] {
+  background-color: var(--surface-hover);
+}
+
+.item[data-pressed] {
+  background-color: var(--surface-active);
+}
+
+.item[data-selected] {
+  background-color: var(--primary);
+  color: white;
+}
+
+.item[data-selected][data-hovered] {
+  background-color: color-mix(in srgb, var(--primary) 90%, black);
+}
+
+.item[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.item[data-focus-visible]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--primary);
+  pointer-events: none;
+}
+
+.listBox[aria-multiselectable="true"] .item[data-selected]::before {
+  content: '✓';
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
+  }
+}

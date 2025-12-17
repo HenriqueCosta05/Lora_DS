@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, JSX } from "react";
 
 export interface BaseBoxProps extends HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;

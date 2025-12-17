@@ -1,0 +1,269 @@
+.chipGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chipGroup .label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+}
+
+.chipList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    outline: none;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: var(--radius-full);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm);
+}
+
+.chip .label {
+    padding: 0;
+    line-height: 1;
+}
+
+.medium {
+    padding: 8px 16px;
+    min-height: 32px;
+}
+
+.small {
+    padding: 5px 12px;
+    min-height: 24px;
+    font-size: 12px;
+}
+
+.filled {
+    border: 1px solid transparent;
+}
+
+.outlined {
+    background-color: transparent;
+    border: 1.5px solid;
+    box-shadow: none;
+}
+
+.colorDefault.filled {
+    background-color: var(--surface-hover);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.colorDefault.outlined {
+    border-color: var(--border);
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.colorDefault.outlined[data-hovered] {
+    background-color: var(--surface-hover);
+}
+
+.colorPrimary.filled {
+    background-color: var(--primary);
+    color: white;
+}
+
+.colorPrimary.filled[data-hovered] {
+    background-color: color-mix(in srgb, var(--primary) 90%, black);
+}
+
+.colorPrimary.outlined {
+    border-color: var(--primary);
+    color: var(--primary);
+    background-color: color-mix(in srgb, var(--primary) 5%, transparent);
+}
+
+.colorPrimary.outlined[data-hovered] {
+    background-color: color-mix(in srgb, var(--primary) 10%, transparent);
+}
+
+.colorSecondary.filled {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.colorSecondary.filled[data-hovered] {
+    background-color: color-mix(in srgb, var(--secondary) 90%, black);
+}
+
+.colorSecondary.outlined {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    background-color: color-mix(in srgb, var(--secondary) 5%, transparent);
+}
+
+.colorSecondary.outlined[data-hovered] {
+    background-color: color-mix(in srgb, var(--secondary) 10%, transparent);
+}
+
+.colorSuccess.filled {
+    background-color: var(--success);
+    color: white;
+}
+
+.colorSuccess.filled[data-hovered] {
+    background-color: color-mix(in srgb, var(--success) 90%, black);
+}
+
+.colorSuccess.outlined {
+    border-color: var(--success);
+    color: var(--success);
+    background-color: color-mix(in srgb, var(--success) 5%, transparent);
+}
+
+.colorSuccess.outlined[data-hovered] {
+    background-color: color-mix(in srgb, var(--success) 10%, transparent);
+}
+
+.colorError.filled {
+    background-color: var(--error);
+    color: white;
+}
+
+.colorError.filled[data-hovered] {
+    background-color: color-mix(in srgb, var(--error) 90%, black);
+}
+
+.colorError.outlined {
+    border-color: var(--error);
+    color: var(--error);
+    background-color: color-mix(in srgb, var(--error) 5%, transparent);
+}
+
+.colorError.outlined[data-hovered] {
+    background-color: color-mix(in srgb, var(--error) 10%, transparent);
+}
+
+.colorWarning.filled {
+    background-color: var(--warning);
+    color: white;
+}
+
+.colorWarning.filled[data-hovered] {
+    background-color: color-mix(in srgb, var(--warning) 90%, black);
+}
+
+.colorWarning.outlined {
+    border-color: var(--warning);
+    color: var(--warning);
+    background-color: color-mix(in srgb, var(--warning) 5%, transparent);
+}
+
+.colorWarning.outlined[data-hovered] {
+    background-color: color-mix(in srgb, var(--warning) 10%, transparent);
+}
+
+.colorInfo.filled {
+    background-color: var(--info);
+    color: white;
+}
+
+.colorInfo.filled[data-hovered] {
+    background-color: color-mix(in srgb, var(--info) 90%, black);
+}
+
+.colorInfo.outlined {
+    border-color: var(--info);
+    color: var(--info);
+    background-color: color-mix(in srgb, var(--info) 5%, transparent);
+}
+
+.colorInfo.outlined[data-hovered] {
+    background-color: color-mix(in srgb, var(--info) 10%, transparent);
+}
+
+.chip[data-hovered] {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.chip[data-pressed] {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+.chip[data-focus-visible] {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.chip[data-selected] {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.chip[data-disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.removeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: rgba(0, 0, 0, 0.15);
+    color: currentColor;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-left: 2px;
+    transition: all var(--transition-fast);
+    opacity: 0.7;
+}
+
+.removeButton:hover {
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.removeButton:active {
+    transform: scale(0.95);
+}
+
+.outlined .removeButton {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.outlined .removeButton:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chip,
+    .removeButton {
+        transition: none;
+    }
+
+    .chip[data-hovered],
+    .chip[data-pressed],
+    .removeButton:hover,
+    .removeButton:active {
+        transform: none;
+    }
+}

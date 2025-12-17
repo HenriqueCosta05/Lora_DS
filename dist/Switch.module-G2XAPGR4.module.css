@@ -1,0 +1,84 @@
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.5;
+  user-select: none;
+  transition: opacity var(--transition-base);
+}
+
+.switch[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.switch[data-focus-visible] .track {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(247, 90, 0, 0.15);
+}
+
+.track {
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-full);
+  background-color: var(--surface);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.switch:hover:not([data-disabled]) .track {
+  border-color: var(--primary);
+  background-color: var(--surface-hover);
+}
+
+.switch[data-selected] .track {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.switch[data-selected]:hover:not([data-disabled]) .track {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  background-color: var(--text);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.switch[data-selected] .thumb {
+  transform: translateX(20px);
+}
+
+.switch[data-disabled] .thumb {
+  background-color: var(--text-disabled);
+}
+
+.label {
+  flex: 1;
+}
+
+.switch[data-disabled] .label {
+  color: var(--text-disabled);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switch,
+  .track,
+  .thumb {
+    transition: none;
+  }
+}

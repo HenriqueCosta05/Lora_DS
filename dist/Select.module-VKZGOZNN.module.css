@@ -1,0 +1,185 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 280px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.select[data-required] .label::after {
+  content: " *";
+  color: var(--error);
+}
+
+.description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.error {
+  font-size: 13px;
+  color: var(--error);
+  font-weight: 500;
+  margin: 0;
+}
+
+.button {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: all var(--transition-base);
+}
+
+.button:hover:not([data-disabled]) {
+  border-color: var(--border-light);
+  background-color: var(--surface-hover);
+}
+
+.button[data-focus-visible] {
+  border-color: var(--primary);
+  background-color: var(--background-elevated);
+  box-shadow: 0 0 0 3px rgba(247, 90, 0, 0.15), var(--shadow-sm);
+}
+
+.button[data-disabled] {
+  background-color: var(--surface);
+  color: var(--text-disabled);
+  border-color: var(--border);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.select[data-invalid] .button {
+  border-color: var(--error);
+  background-color: var(--error-bg);
+}
+
+.value {
+  flex: 1;
+  text-align: left;
+}
+
+.value[data-placeholder] {
+  color: var(--text-muted);
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  transition: transform var(--transition-base);
+}
+
+.button[data-pressed] .chevron {
+  transform: rotate(180deg);
+}
+
+.popover {
+  min-width: var(--trigger-width);
+  background-color: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.popover[data-entering] {
+  animation: slideIn var(--transition-base);
+}
+
+.popover[data-exiting] {
+  animation: slideOut var(--transition-fast);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.listbox {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 4px;
+  outline: none;
+}
+
+.item {
+  padding: 10px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.item[data-hovered] {
+  background-color: var(--surface-hover);
+}
+
+.item[data-focused] {
+  background-color: var(--surface-hover);
+}
+
+.item[data-selected] {
+  background-color: var(--primary);
+  color: var(--text);
+  font-weight: 500;
+}
+
+.item[data-disabled] {
+  color: var(--text-disabled);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .chevron,
+  .item,
+  .popover {
+    transition: none;
+  }
+
+  .popover[data-entering],
+  .popover[data-exiting] {
+    animation: none;
+  }
+}

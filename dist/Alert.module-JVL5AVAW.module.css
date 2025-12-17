@@ -1,0 +1,156 @@
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: var(--radius-lg);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+.title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.message {
+    color: inherit;
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    padding: 0;
+    opacity: 0.7;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.closeButton:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.standard.success {
+    background-color: color-mix(in srgb, var(--success) 10%, transparent);
+    color: color-mix(in srgb, var(--success) 90%, black);
+    border: 1px solid color-mix(in srgb, var(--success) 30%, transparent);
+}
+
+.standard.success .icon {
+    color: var(--success);
+}
+
+.standard.info {
+    background-color: color-mix(in srgb, var(--info) 10%, transparent);
+    color: color-mix(in srgb, var(--info) 90%, black);
+    border: 1px solid color-mix(in srgb, var(--info) 30%, transparent);
+}
+
+.standard.info .icon {
+    color: var(--info);
+}
+
+.standard.warning {
+    background-color: color-mix(in srgb, var(--warning) 10%, transparent);
+    color: color-mix(in srgb, var(--warning) 90%, black);
+    border: 1px solid color-mix(in srgb, var(--warning) 30%, transparent);
+}
+
+.standard.warning .icon {
+    color: var(--warning);
+}
+
+.standard.error {
+    background-color: color-mix(in srgb, var(--error) 10%, transparent);
+    color: color-mix(in srgb, var(--error) 90%, black);
+    border: 1px solid color-mix(in srgb, var(--error) 30%, transparent);
+}
+
+.standard.error .icon {
+    color: var(--error);
+}
+
+.filled.success {
+    background-color: var(--success);
+    color: white;
+}
+
+.filled.info {
+    background-color: var(--info);
+    color: white;
+}
+
+.filled.warning {
+    background-color: var(--warning);
+    color: white;
+}
+
+.filled.error {
+    background-color: var(--error);
+    color: white;
+}
+
+.filled .icon {
+    color: white;
+}
+
+.filled .closeButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.outlined.success {
+    background-color: transparent;
+    color: var(--success);
+    border: 1.5px solid var(--success);
+}
+
+.outlined.info {
+    background-color: transparent;
+    color: var(--info);
+    border: 1.5px solid var(--info);
+}
+
+.outlined.warning {
+    background-color: transparent;
+    color: var(--warning);
+    border: 1.5px solid var(--warning);
+}
+
+.outlined.error {
+    background-color: transparent;
+    color: var(--error);
+    border: 1.5px solid var(--error);
+}
+
+.outlined .icon {
+    color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .closeButton {
+        transition: none;
+    }
+}

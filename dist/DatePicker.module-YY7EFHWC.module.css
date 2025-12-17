@@ -1,0 +1,210 @@
+.datePicker {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background-color: var(--surface);
+    transition: all var(--transition-fast);
+    min-height: 48px;
+}
+
+.group:focus-within {
+    border-color: var(--primary);
+    outline: 2px solid color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    background-color: var(--surface-hover);
+    border-radius: var(--radius-sm);
+    flex: 1;
+    min-width: 0;
+}
+
+.inputIcon {
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.dateInput {
+    display: flex;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+}
+
+.segment {
+    padding: 4px 6px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    text-align: center;
+    min-width: 24px;
+}
+
+.segment[data-placeholder] {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.segment:focus {
+    background-color: var(--primary);
+    color: white;
+    outline: none;
+}
+
+.calendarButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    background: var(--surface-hover);
+    color: var(--primary);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.calendarButton:hover {
+    background-color: color-mix(in srgb, var(--primary) 15%, var(--surface-hover));
+    color: var(--primary);
+}
+
+.calendarButton:active {
+    transform: scale(0.95);
+}
+
+.helperText {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.error .group {
+    border-color: var(--error);
+}
+
+.error .group:focus-within {
+    outline-color: color-mix(in srgb, var(--error) 20%, transparent);
+}
+
+.error .helperText {
+    color: var(--error);
+}
+
+.popover {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 16px;
+    max-width: min(400px, calc(100vw - 40px));
+}
+
+.dialog {
+    outline: none;
+}
+
+.calendar {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.navButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.navButton:hover {
+    background-color: var(--surface-hover);
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.calendarGrid {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.calendarHeaderCell {
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.calendarCell {
+    padding: 8px;
+    font-size: 14px;
+    color: var(--text);
+    text-align: center;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.calendarCell:hover {
+    background-color: var(--surface-hover);
+}
+
+.calendarCell[data-selected] {
+    background-color: var(--primary);
+    color: white;
+}
+
+.calendarCell[data-disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.calendarCell[data-outside-month] {
+    color: var(--text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .group,
+    .calendarButton,
+    .navButton,
+    .calendarCell {
+        transition: none;
+    }
+}

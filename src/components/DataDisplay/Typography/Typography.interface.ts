@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import React, { HTMLAttributes } from 'react';
 
 export type TypographyVariant =
   | 'h1'
@@ -20,7 +20,7 @@ export type TypographyColor = 'primary' | 'secondary' | 'text' | 'error' | 'succ
 
 export interface BaseTypographyProps extends Omit<HTMLAttributes<HTMLElement>, 'color'> {
   variant?: TypographyVariant;
-  component?: keyof JSX.IntrinsicElements;
+  component?: React.ElementType;
   align?: TypographyAlign;
   color?: TypographyColor;
   noWrap?: boolean;

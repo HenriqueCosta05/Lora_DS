@@ -1,40 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Lora Design System
 
-## Getting Started
+A comprehensive, accessible design system built with React Aria Components, featuring 48+ production-ready components.
 
-First, run the development server:
+## Features
+
+- 🎨 **48+ Components** - Complete set of UI components for modern web applications
+- ♿ **Accessible** - Built with React Aria for WCAG compliance
+- 🎭 **Dark/Light Mode** - Automatic theme switching based on user preference
+- 📦 **Tree-shakeable** - Import only what you need
+- 🎯 **TypeScript** - Full type safety with TypeScript
+- 💅 **CSS Modules** - Scoped styling without conflicts
+- 🎪 **Storybook** - Interactive component documentation
+
+## Installation
 
 ```bash
-npm run dev
+npm install lora-design-system react-aria-components @iconify-icon/react
 # or
-yarn dev
+yarn add lora-design-system react-aria-components @iconify-icon/react
 # or
-pnpm dev
-# or
-bun dev
+pnpm add lora-design-system react-aria-components @iconify-icon/react
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick Start
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. Import the global styles in your app:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```tsx
+// app/layout.tsx or pages/_app.tsx
+import 'lora-design-system/styles';
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+2. Use components:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```tsx
+import { ButtonComponent } from 'lora-design-system';
 
-## Learn More
+export default function App() {
+  return (
+    <ButtonComponent variant="contained" color="primary">
+      Click me
+    </ButtonComponent>
+  );
+}
+```
+## Components
 
-To learn more about Next.js, take a look at the following resources:
+### Buttons (2)
+- **Button** - Primary action button with variants
+- **ButtonGroup** - Group related buttons together
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Forms (16)
+- **Autocomplete** - Text input with suggestions
+- **Checkbox** - Checkbox with indeterminate state
+- **DatePicker** - Single date selection
+- **DateRangePicker** - Date range selection with dual calendars
+- **DateTimePicker** - Combined date and time selection
+- **InputGroup** - Input with adornments
+- **RadioGroup** - Radio button groups
+- **Rating** - Star rating component
+- **Select** - Dropdown selection
+- **Slider** - Range slider input
+- **Switch** - Toggle switch
+- **TextField** - Text input with validation
+- **TimeField** - Time-only input
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Overlay (3)
+- **Modal** - Dialog overlay
+- **Popover** - Floating content container
+- **Tooltip** - Contextual help tooltips
 
-## Deploy on Vercel
+### Navigation (8)
+- **Breadcrumbs** - Navigation trail
+- **Drawer** - Sliding side panel
+- **Link** - Hyperlinks with variants
+- **Menu** - Dropdown menus
+- **Pagination** - Page navigation
+- **SpeedDial** - Floating action button with menu
+- **Stepper** - Step-by-step progress
+- **Tabs** - Tabbed navigation
+- **TreeView** - Hierarchical tree navigation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Data Display (13)
+- **Accordion** - Expandable content panels
+- **Avatar** - User profile images
+- **Badge** - Status indicators
+- **Chip** - Tags and filters
+- **Divider** - Content separators
+- **ImageList** - Image grid layouts
+- **ListBox** - Selectable lists
+- **Table** - Data tables with sorting
+- **Timeline** - Event timeline
+- **Typography** - Text styling components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+### Layout (4)
+- **Box** - Flexible container
+- **Container** - Responsive container
+- **Grid** - 12-column grid system
+- **Paper** - Elevated surface
+
+### Feedback (5)
+- **Alert** - Alert messages
+- **Backdrop** - Overlay backdrop
+- **Progress** - Progress indicators
+- **Skeleton** - Loading placeholders
+- **Snackbar** - Toast notifications
+
+## Theming
+
+The design system includes a comprehensive color system with automatic dark/light mode support:
+
+```css
+/* Colors available */
+--primary: #F75A00
+--secondary: #859448
+--success, --error, --warning, --info
+/* Plus dark mode variants */
+```
+
+## TypeScript
+
+All components are fully typed with TypeScript:
+
+```tsx
+import { ButtonComponent, BaseButtonProps } from 'lora-design-system';
+
+const MyButton: React.FC<BaseButtonProps> = (props) => {
+  return <ButtonComponent {...props} />;
+};
+```
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+MIT © Henrique
+
+## Credits
+
+Built with:
+- [React Aria Components](https://react-spectrum.adobe.com/react-aria/) - Accessible component primitives
+- [Iconify](https://iconify.design/) - Icon framework
+- [Next.js](https://nextjs.org/) - React framework
+- [Storybook](https://storybook.js.org/) - Component documentation
