@@ -15,11 +15,11 @@ A comprehensive, accessible design system built with React Aria Components, feat
 ## Installation
 
 ```bash
-npm install lora-design-system react-aria-components @iconify-icon/react
+npm install lora-ds
 # or
-yarn add lora-design-system react-aria-components @iconify-icon/react
+yarn add lora-ds
 # or
-pnpm add lora-design-system react-aria-components @iconify-icon/react
+pnpm add lora-ds
 ```
 
 ## Quick Start
