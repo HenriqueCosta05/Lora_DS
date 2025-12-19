@@ -1,4 +1,5 @@
 import { Icon } from "@iconify-icon/react";
+import { I18nProvider } from "react-aria";
 import {
     Button,
     CalendarCell,
@@ -27,6 +28,7 @@ export const DateRangePickerComponent = (props: BaseDateRangePickerProps) => {
         error,
         errorMessage,
         className,
+        locale,
         ...restProps
     } = props;
 
@@ -36,25 +38,21 @@ export const DateRangePickerComponent = (props: BaseDateRangePickerProps) => {
         className
     ].filter(Boolean).join(" ");
 
-    return (
+    const dateRangePickerContent = (
         <DateRangePicker {...restProps} className={dateRangePickerClassNames}>
             {label && <Label className={styles.label}>{label}</Label>}
             <Group className={styles.group}>
-                <div className={styles.inputContainer}>
-                    <Icon icon="mdi:calendar-start" width="18" height="18" className={styles.inputIcon} />
-                    <DateInput slot="start" className={styles.dateInput}>
-                        {(segment) => <DateSegment segment={segment} className={styles.segment} />}
-                    </DateInput>
-                </div>
+                <Icon icon="mdi:calendar-start" width="18" height="18" className={styles.inputIcon} />
+                <DateInput slot="start" className={styles.dateInput}>
+                    {(segment) => <DateSegment segment={segment} className={styles.segment} />}
+                </DateInput>
                 <div className={styles.divider}>
-                    <Icon icon="mdi:arrow-right" width="20" height="20" />
+                    <Icon icon="mdi:arrow-right" width="16" height="16" />
                 </div>
-                <div className={styles.inputContainer}>
-                    <Icon icon="mdi:calendar-end" width="18" height="18" className={styles.inputIcon} />
-                    <DateInput slot="end" className={styles.dateInput}>
-                        {(segment) => <DateSegment segment={segment} className={styles.segment} />}
-                    </DateInput>
-                </div>
+                <Icon icon="mdi:calendar-end" width="18" height="18" className={styles.inputIcon} />
+                <DateInput slot="end" className={styles.dateInput}>
+                    {(segment) => <DateSegment segment={segment} className={styles.segment} />}
+                </DateInput>
                 <Button className={styles.calendarButton}>
                     <Icon icon="mdi:calendar" width="20" height="20" />
                 </Button>
@@ -113,4 +111,10 @@ export const DateRangePickerComponent = (props: BaseDateRangePickerProps) => {
             </Popover>
         </DateRangePicker>
     );
+
+    return locale ? (
+        <I18nProvider locale={locale}>
+            {dateRangePickerContent}
+        </I18nProvider>
+    ) : dateRangePickerContent;
 };

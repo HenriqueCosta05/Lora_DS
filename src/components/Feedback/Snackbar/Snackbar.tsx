@@ -35,9 +35,12 @@ export const SnackbarComponent = (props: BaseSnackbarProps) => {
 
     if (!open) return null;
 
+    // Convert kebab-case to camelCase for CSS class
+    const positionClass = position.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+
     const snackbarClassNames = [
         styles.snackbar,
-        styles[position],
+        styles[positionClass],
         severity && styles[severity],
         className
     ].filter(Boolean).join(" ");

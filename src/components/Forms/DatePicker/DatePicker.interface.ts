@@ -6,4 +6,9 @@ export interface BaseDatePickerProps extends Omit<AriaDatePickerProps<any>, 'chi
     error?: boolean;
     errorMessage?: string;
     className?: string;
+    /**
+     * The locale to use for formatting dates.
+     * @example 'en-US', 'pt-BR', 'es-ES', 'fr-FR', etc.
+     */
+    locale?: string;
 }

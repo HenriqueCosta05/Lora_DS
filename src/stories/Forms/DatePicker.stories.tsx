@@ -33,3 +33,11 @@ export const WithError: Story = {
     errorMessage: "Please select a valid date",
   },
 };
+
+export const WithLocale: Story = {
+  args: {
+    label: "Data de Nascimento",
+    helperText: "Selecione sua data de nascimento",
+    locale: "pt-BR",
+  },
+};

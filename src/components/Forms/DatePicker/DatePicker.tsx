@@ -1,4 +1,5 @@
 import { Icon } from "@iconify-icon/react";
+import { I18nProvider } from "react-aria";
 import {
     Button,
     Calendar,
@@ -27,6 +28,7 @@ export const DatePickerComponent = (props: BaseDatePickerProps) => {
         error,
         errorMessage,
         className,
+        locale,
         ...restProps
     } = props;
 
@@ -36,16 +38,14 @@ export const DatePickerComponent = (props: BaseDatePickerProps) => {
         className
     ].filter(Boolean).join(" ");
 
-    return (
+    const datePickerContent = (
         <DatePicker {...restProps} className={datePickerClassNames}>
             {label && <Label className={styles.label}>{label}</Label>}
             <Group className={styles.group}>
-                <div className={styles.inputContainer}>
-                    <Icon icon="mdi:calendar" width="18" height="18" className={styles.inputIcon} />
-                    <DateInput className={styles.dateInput}>
-                        {(segment) => <DateSegment segment={segment} className={styles.segment} />}
-                    </DateInput>
-                </div>
+                <Icon icon="mdi:calendar" width="18" height="18" className={styles.inputIcon} />
+                <DateInput className={styles.dateInput}>
+                    {(segment) => <DateSegment segment={segment} className={styles.segment} />}
+                </DateInput>
                 <Button className={styles.calendarButton}>
                     <Icon icon="mdi:calendar-month" width="20" height="20" />
                 </Button>
@@ -86,4 +86,10 @@ export const DatePickerComponent = (props: BaseDatePickerProps) => {
             </Popover>
         </DatePicker>
     );
+
+    return locale ? (
+        <I18nProvider locale={locale}>
+            {datePickerContent}
+        </I18nProvider>
+    ) : datePickerContent;
 };

@@ -62,6 +62,7 @@
     top: 24px;
     left: 50%;
     transform: translateX(-50%);
+    animation: slideInFromTop var(--transition-base) ease-out;
 }
 
 .topRight {
@@ -78,6 +79,7 @@
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
+    animation: slideInFromBottom var(--transition-base) ease-out;
 }
 
 .bottomRight {
@@ -116,14 +118,6 @@
     }
 }
 
-.topCenter {
-    animation: slideInFromTop var(--transition-base) ease-out;
-}
-
-.bottomCenter {
-    animation: slideInFromBottom var(--transition-base) ease-out;
-}
-
 @keyframes slideInFromTop {
     from {
         opacity: 0;
@@ -156,6 +150,21 @@
     .snackbar {
         min-width: auto;
         max-width: calc(100vw - 32px);
+    }
+
+    .topLeft,
+    .topCenter,
+    .topRight {
+        top: 16px;
+        left: 16px !important;
+        right: 16px !important;
+        transform: none !important;
+    }
+
+    .bottomLeft,
+    .bottomCenter,
+    .bottomRight {
+        bottom: 16px;
         left: 16px !important;
         right: 16px !important;
         transform: none !important;

@@ -33,3 +33,11 @@ export const WithError: Story = {
     errorMessage: "Please select a valid date range",
   },
 };
+
+export const WithLocale: Story = {
+  args: {
+    label: "Período de Datas",
+    helperText: "Selecione seu período de datas",
+    locale: "pt-BR",
+  },
+};

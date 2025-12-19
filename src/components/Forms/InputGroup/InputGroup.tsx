@@ -40,8 +40,10 @@ export const InputGroupComponent = (props: BaseInputGroupProps) => {
 export const InputGroupField = (props: InputGroupFieldProps) => {
     const { placeholder, className, ...restProps } = props;
 
+    const textFieldClassName = [styles.textField, className].filter(Boolean).join(" ");
+
     return (
-        <TextField {...restProps} className={className}>
+        <TextField {...restProps} className={textFieldClassName}>
             <Input placeholder={placeholder} className={styles.input} />
         </TextField>
     );

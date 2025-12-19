@@ -33,3 +33,11 @@ export const WithError: Story = {
     errorMessage: "Please select a valid date and time",
   },
 };
+
+export const WithLocale: Story = {
+  args: {
+    label: "Data e Hora do Evento",
+    helperText: "Selecione a data e hora do seu evento",
+    locale: "pt-BR",
+  },
+};
