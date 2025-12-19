@@ -28,13 +28,13 @@ pnpm add lora-ds
 
 ```tsx
 // app/layout.tsx or pages/_app.tsx
-import 'lora-design-system/styles';
+import 'lora-ds/styles';
 ```
 
 2. Use components:
 
 ```tsx
-import { ButtonComponent } from 'lora-design-system';
+import { ButtonComponent } from 'lora-ds';
 
 export default function App() {
   return (
@@ -123,7 +123,7 @@ The design system includes a comprehensive color system with automatic dark/ligh
 All components are fully typed with TypeScript:
 
 ```tsx
-import { ButtonComponent, BaseButtonProps } from 'lora-design-system';
+import { ButtonComponent, BaseButtonProps } from 'lora-ds';
 
 const MyButton: React.FC<BaseButtonProps> = (props) => {
   return <ButtonComponent {...props} />;

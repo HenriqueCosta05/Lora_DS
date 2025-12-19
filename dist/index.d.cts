@@ -63,6 +63,7 @@ interface BaseDatePickerProps extends Omit<DatePickerProps<any>, 'children'> {
     error?: boolean;
     errorMessage?: string;
     className?: string;
+    locale?: string;
 }
 
 declare const DatePickerComponent: (props: BaseDatePickerProps) => react_jsx_runtime.JSX.Element;
@@ -73,6 +74,7 @@ interface BaseDateRangePickerProps extends Omit<DateRangePickerProps<any>, 'chil
     error?: boolean;
     errorMessage?: string;
     className?: string;
+    locale?: string;
 }
 
 declare const DateRangePickerComponent: (props: BaseDateRangePickerProps) => react_jsx_runtime.JSX.Element;
@@ -83,6 +85,7 @@ interface BaseDateTimePickerProps extends Omit<DatePickerProps<any>, 'children'>
     error?: boolean;
     errorMessage?: string;
     className?: string;
+    locale?: string;
 }
 
 declare const DateTimePickerComponent: (props: BaseDateTimePickerProps) => react_jsx_runtime.JSX.Element;
