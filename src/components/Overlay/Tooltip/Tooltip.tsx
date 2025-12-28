@@ -13,26 +13,47 @@ export const TooltipTriggerComponent = (props: BaseTooltipTriggerProps) => {
 };
 
 export const TooltipComponent = (props: BaseTooltipProps) => {
-    const { children, className, ...restProps } = props;
+    const {
+        children,
+        className,
+        open,
+        placement = 'top',
+        offset = 10,
+        showArrow = true,
+        ...restProps
+    } = props;
 
     const tooltipClassNames = [
         styles.tooltip,
+        open !== undefined && styles.standalone,
         className
     ].filter(Boolean).join(" ");
 
+    const tooltipStyle = open !== undefined ? {
+        display: open ? 'block' : 'none'
+    } : undefined;
+
     return (
-        <Tooltip {...restProps} className={tooltipClassNames} offset={10}>
-            <OverlayArrow>
-                <svg width={12} height={12} viewBox="0 0 12 12" className={styles.arrow}>
-                    <path d="M0 0 L6 6 L12 0" />
-                </svg>
-            </OverlayArrow>
+        <Tooltip
+            {...restProps}
+            className={tooltipClassNames}
+            style={tooltipStyle}
+            offset={offset}
+            placement={placement as any}
+        >
+            {showArrow && (
+                <OverlayArrow>
+                    <svg width={12} height={12} viewBox="0 0 12 12" className={styles.arrow}>
+                        <path d="M0 0 L6 6 L12 0" />
+                    </svg>
+                </OverlayArrow>
+            )}
             {children}
         </Tooltip>
     );
 };
 
-export const TooltipButtonComponent = (props: { children: React.ReactNode; className?: string }) => {
+export const TooltipButtonComponent = (props: { children: React.ReactNode; className?: string; }) => {
     const { children, className } = props;
 
     return (
