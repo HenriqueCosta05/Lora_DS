@@ -2,6 +2,9 @@
 
 A comprehensive, accessible design system built with React Aria Components, featuring 48+ production-ready components.
 
+<img width="1912" height="871" alt="image" src="https://github.com/user-attachments/assets/4ff1f6af-e94b-430e-acc2-7416674ee5f8" />
+
+
 ## Features
 
 - 🎨 **48+ Components** - Complete set of UI components for modern web applications
@@ -143,7 +146,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-MIT © Henrique
+MIT © Henrique Costa
 
 ## Credits
 
