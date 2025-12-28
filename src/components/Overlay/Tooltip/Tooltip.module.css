@@ -1,24 +1,23 @@
 .tooltip {
-  background-color: var(--text);
-  color: var(--background);
-  padding: 8px 12px;
-  border-radius: var(--radius-md);
-  font-size: 14px;
-  line-height: 1.4;
-  max-width: 250px;
-  box-shadow: var(--shadow-lg);
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  line-height: inherit;
+  max-width: none;
+  box-shadow: none;
   z-index: 1000;
   word-wrap: break-word;
   position: relative;
 }
 
 .arrow {
-  display: block;
-  fill: var(--text);
+  display: none;
 }
 
 .arrow svg {
-  display: block;
+  display: none;
 }
 
 .tooltip[data-placement="top"] .arrow {
