@@ -1,7 +1,7 @@
 {
   "name": "lora-ds",
   "description": "A comprehensive design system and component library for building accessible web applications with React and Next.js. Built with React Aria Components.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "author": "Henrique",
   "type": "module",
