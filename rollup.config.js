@@ -30,7 +30,7 @@ export default [
       terser(),
       postcss(),
     ],
-    external: ["react", "react-dom", "react-aria-components", "@iconify-icon/react"],
+    external: ["react", "react-dom", "react-aria-components"],
   },
   {
     input: "src/index.ts",

@@ -45,3 +45,7 @@ storybook-static
 
 # local lora ds build
 /dist
+
+# Lock files
+package-lock.json
+yarn.lock
