@@ -689,22 +689,44 @@ var PopoverButtonComponent = (props) => {
 
 // src/components/Overlay/Tooltip/Tooltip.tsx
 import { Button as Button9, OverlayArrow as OverlayArrow2, Tooltip, TooltipTrigger } from "react-aria-components";
-import styles17 from "./Tooltip.module-E5ZB6IYV.module.css";
+import styles17 from "./Tooltip.module-Y5KKIJQT.module.css";
 import { jsx as jsx18, jsxs as jsxs15 } from "react/jsx-runtime";
 var TooltipTriggerComponent = (props) => {
   const { children, ...restProps } = props;
   return /* @__PURE__ */ jsx18(TooltipTrigger, { ...restProps, children });
 };
 var TooltipComponent = (props) => {
-  const { children, className, ...restProps } = props;
+  const {
+    children,
+    className,
+    open,
+    placement = "top",
+    offset = 10,
+    showArrow = true,
+    ...restProps
+  } = props;
   const tooltipClassNames = [
     styles17.tooltip,
+    open !== void 0 && styles17.standalone,
     className
   ].filter(Boolean).join(" ");
-  return /* @__PURE__ */ jsxs15(Tooltip, { ...restProps, className: tooltipClassNames, offset: 10, children: [
-    /* @__PURE__ */ jsx18(OverlayArrow2, { children: /* @__PURE__ */ jsx18("svg", { width: 12, height: 12, viewBox: "0 0 12 12", className: styles17.arrow, children: /* @__PURE__ */ jsx18("path", { d: "M0 0 L6 6 L12 0" }) }) }),
-    children
-  ] });
+  const tooltipStyle = open !== void 0 ? {
+    display: open ? "block" : "none"
+  } : void 0;
+  return /* @__PURE__ */ jsxs15(
+    Tooltip,
+    {
+      ...restProps,
+      className: tooltipClassNames,
+      style: tooltipStyle,
+      offset,
+      placement,
+      children: [
+        showArrow && /* @__PURE__ */ jsx18(OverlayArrow2, { children: /* @__PURE__ */ jsx18("svg", { width: 12, height: 12, viewBox: "0 0 12 12", className: styles17.arrow, children: /* @__PURE__ */ jsx18("path", { d: "M0 0 L6 6 L12 0" }) }) }),
+        children
+      ]
+    }
+  );
 };
 var TooltipButtonComponent = (props) => {
   const { children, className } = props;

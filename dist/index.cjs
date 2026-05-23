@@ -732,22 +732,44 @@ var PopoverButtonComponent = (props) => {
 
 // src/components/Overlay/Tooltip/Tooltip.tsx
 var import_react_aria_components18 = require("react-aria-components");
-var import_Tooltip = __toESM(require("./Tooltip.module-E5ZB6IYV.module.css"), 1);
+var import_Tooltip = __toESM(require("./Tooltip.module-Y5KKIJQT.module.css"), 1);
 var import_jsx_runtime18 = require("react/jsx-runtime");
 var TooltipTriggerComponent = (props) => {
   const { children, ...restProps } = props;
   return /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_react_aria_components18.TooltipTrigger, { ...restProps, children });
 };
 var TooltipComponent = (props) => {
-  const { children, className, ...restProps } = props;
+  const {
+    children,
+    className,
+    open,
+    placement = "top",
+    offset = 10,
+    showArrow = true,
+    ...restProps
+  } = props;
   const tooltipClassNames = [
     import_Tooltip.default.tooltip,
+    open !== void 0 && import_Tooltip.default.standalone,
     className
   ].filter(Boolean).join(" ");
-  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(import_react_aria_components18.Tooltip, { ...restProps, className: tooltipClassNames, offset: 10, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_react_aria_components18.OverlayArrow, { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("svg", { width: 12, height: 12, viewBox: "0 0 12 12", className: import_Tooltip.default.arrow, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("path", { d: "M0 0 L6 6 L12 0" }) }) }),
-    children
-  ] });
+  const tooltipStyle = open !== void 0 ? {
+    display: open ? "block" : "none"
+  } : void 0;
+  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
+    import_react_aria_components18.Tooltip,
+    {
+      ...restProps,
+      className: tooltipClassNames,
+      style: tooltipStyle,
+      offset,
+      placement,
+      children: [
+        showArrow && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_react_aria_components18.OverlayArrow, { children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("svg", { width: 12, height: 12, viewBox: "0 0 12 12", className: import_Tooltip.default.arrow, children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("path", { d: "M0 0 L6 6 L12 0" }) }) }),
+        children
+      ]
+    }
+  );
 };
 var TooltipButtonComponent = (props) => {
   const { children, className } = props;

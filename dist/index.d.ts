@@ -1,6 +1,6 @@
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import * as react_aria_components from 'react-aria-components';
-import { ButtonProps, ComboBoxProps, ListBoxItemProps, CheckboxProps, DatePickerProps, DateRangePickerProps, TextFieldProps, RadioGroupProps, RadioProps, SelectProps, SliderProps, SwitchProps, TimeFieldProps, ModalOverlayProps, DialogProps, PopoverProps, DialogTrigger, TooltipProps, BreadcrumbsProps, LinkProps, MenuTriggerProps, MenuProps, MenuItemProps, TabsProps, TabListProps, TabProps, TabPanelProps, DisclosureProps, TagGroupProps, TagProps, SeparatorProps, ListBoxProps, TableProps, TableHeaderProps, ColumnProps, TableBodyProps, RowProps, CellProps, ProgressBarProps } from 'react-aria-components';
+import { ButtonProps, ComboBoxProps, ListBoxItemProps, CheckboxProps, DatePickerProps, DateRangePickerProps, TextFieldProps, RadioGroupProps, RadioProps, SelectProps, SliderProps, SwitchProps, TimeFieldProps, DialogProps, ModalOverlayProps, PopoverProps, DialogTrigger, TooltipProps, BreadcrumbsProps, LinkProps, MenuItemProps, MenuProps, MenuTriggerProps, TabListProps, TabPanelProps, TabProps, TabsProps, DisclosureProps, TagGroupProps, TagProps, SeparatorProps, ListBoxProps, CellProps, ColumnProps, RowProps, TableBodyProps, TableHeaderProps, TableProps, ProgressBarProps } from 'react-aria-components';
 import * as react from 'react';
 import react__default, { HTMLAttributes, JSX } from 'react';
 
@@ -225,10 +225,17 @@ interface BaseTooltipTriggerProps {
     children: React.ReactNode;
     delay?: number;
     closeDelay?: number;
+    isOpen?: boolean;
+    defaultOpen?: boolean;
+    onOpenChange?: (isOpen: boolean) => void;
 }
 interface BaseTooltipProps extends Omit<TooltipProps, 'className'> {
     children: React.ReactNode;
     className?: string;
+    open?: boolean;
+    placement?: 'top' | 'bottom' | 'left' | 'right' | 'top start' | 'top end' | 'bottom start' | 'bottom end';
+    offset?: number;
+    showArrow?: boolean;
 }
 
 declare const TooltipTriggerComponent: (props: BaseTooltipTriggerProps) => react_jsx_runtime.JSX.Element;
